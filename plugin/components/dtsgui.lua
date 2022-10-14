@@ -7,7 +7,15 @@ function component:render()
         BackgroundColor3 = Color3.fromRGB(4, 21, 144)
     }, {
         objectToConvert = roact.createElement("TextButton", {
-
+            Text = self.props.object,
+            Size = UDim2.fromScale(0.9, 0.1),
+            Position = UDim2.fromScale(0.1, 0.1),
+            BackgroundColor3 = Color3.fromRGB(67, 26, 204),
+            TextColor3 = Color3.fromRGB(255, 255, 255)
+        }, {
+            ["$uicorner"] = roact.createElement("UICorner", {
+                CornerRadius = UDim.new(0.2, 0)
+            })
         })
     })
 end
