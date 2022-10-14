@@ -8,4 +8,13 @@ local components = script.Parent:WaitForChild("components")
 local stores = script.Parent:WaitForChild("stores")
 local dtsStore = require(stores:WaitForChild("dtsstore"))
 local dtsGui = require(components:WaitForChild("dtsgui"))
-local widget = plugin:CreateDockWidgetPluginGui("dtsManGui")
+local widget = plugin:CreateDockWidgetPluginGui("dtsManGui", DockWidgetPluginGuiInfo.new(
+    Enum.InitialDockState.Float,
+    false,
+    false,
+    300,
+    400,
+    300,
+    400
+))
+widget.Title = "dtsMan"
