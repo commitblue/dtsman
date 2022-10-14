@@ -6,4 +6,4 @@ if (args == []):
 else:
     path = args[0]
     httpServer = args[1]
-    print("Hosting at {httpServer} and waiting for response to write {path}\nUse the roblox plugin and type in the http link and select the object you want to convert into .d.ts and tada\npress ctrl + C to stop\n")
+    print("Hosting at {0} and waiting for response to write {1}\nUse the roblox plugin and type in the http link and select the object you want to convert into .d.ts and tada\npress ctrl + C to stop\n".format(httpServer, path))
