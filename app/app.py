@@ -1,5 +1,5 @@
 import sys
-args = str(sys.argv)
+args = sys.argv
 args.pop(0)
 print(args)
 if (args == []):
