@@ -6,5 +6,8 @@ if (args == []){
     const httpPort = args[1]
     const express = require("express")
     const app = express()
-    
+
+    app.listen(httpPort, () => {
+        console.log("Ready! connect your plugin now")
+    })
 }
