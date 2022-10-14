@@ -18,6 +18,16 @@ local widget = plugin:CreateDockWidgetPluginGui("dtsManGui", DockWidgetPluginGui
     400
 ))
 widget.Title = "dtsMan"
+dtsGui = roactrodux.connect(
+    function(state)
+        return state
+    end,
+    function(dispatch)
+        return {
+            
+        }
+    end
+)
 local tree = roact.createElement(roactrodux.StoreProvider, {
     store = dtsStore
 }, {
