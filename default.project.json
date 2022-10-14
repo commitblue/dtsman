@@ -1,0 +1,15 @@
+{
+  "name": "dtsman",
+  "tree": {
+    "$className": "DataModel",
+    "ServerStorage": {
+      "$className": "ServerStorage",
+      "dtsman": {
+        "$path": "plugin",
+        "packages": {
+          "$path": "Packages"
+        }
+      }
+    }
+  }
+}
