@@ -18,3 +18,8 @@ local widget = plugin:CreateDockWidgetPluginGui("dtsManGui", DockWidgetPluginGui
     400
 ))
 widget.Title = "dtsMan"
+local tree = roact.createElement(roactrodux.StoreProvider, {
+    store = dtsStore
+}, {
+    ["gui"] = roact.createElement(dtsGui)
+})
