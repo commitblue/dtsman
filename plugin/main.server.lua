@@ -23,3 +23,4 @@ local tree = roact.createElement(roactrodux.StoreProvider, {
 }, {
     ["gui"] = roact.createElement(dtsGui)
 })
+roact.mount(tree, widget)
