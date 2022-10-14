@@ -25,7 +25,19 @@ function component:render()
             TextScaled = true,
             TextColor3 = Color3.fromRGB(255, 255, 255),
             Size = UDim2.fromScale(0.9, 0.1),
-            Position = UDim2.fromScale(0.1, 0.2),
+            BackgroundColor3 = Color3.fromRGB(67, 26, 204),
+            Position = UDim2.fromScale(0.1, 0.2)
+        }, {
+            ["$uicorner"] = roact.createElement("UICorner", {
+                CornerRadius = UDim.new(0.2, 0)
+            })
+        }),
+        startButton = roact.createElement("TextButton", {
+            Text = self.props.status,
+            Font = Enum.Font.Arial,
+            TextScaled = true,
+            TextColor3 = Color3.fromRGB(255, 255, 255),
+            BackgroundColor3 = Color3.fromRGB(67, 26, 204),
             
         })
     })
