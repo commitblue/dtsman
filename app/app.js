@@ -6,7 +6,12 @@ if (args == []){
     const httpPort = args[1]
     const express = require("express")
     const app = express()
-
+    app.get("/", (req, res) => {
+        console.log("dtsman")
+    })
+    app.post("/dts/", (req, res) => {
+        
+    })
     app.listen(httpPort, () => {
         console.log("Ready! connect your plugin now")
     })
