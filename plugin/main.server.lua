@@ -25,7 +25,10 @@ dtsGui = roactrodux.connect(
     function(dispatch)
         return {
             startButton = function()
-                
+                local state = dtsStore:getState()
+                export type state = {
+                    
+                }
             end
         }
     end
