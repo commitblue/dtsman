@@ -7,10 +7,10 @@ if (args == []){
     const express = require("express")
     const app = express()
     app.get("/", (req, res) => {
-        console.log("dtsman")
+        res.send("dtsman")
     })
     app.post("/dts/", (req, res) => {
-        
+
     })
     app.listen(httpPort, () => {
         console.log("Ready! connect your plugin now")
