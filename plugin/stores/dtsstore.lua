@@ -5,6 +5,11 @@ return rodux.Store.new(function(state, action)
         object = "Select an object",
         status = "Start"
     }
-
+    if action.type == "editState" then
+        state[action.stateToEdit] = action.value
+        return state
+    elseif action.type == "overwriteState" then
+        return action.state
+    end
     return state
 end)
