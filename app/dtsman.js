@@ -15,6 +15,6 @@ if (args.length < 1){
         fs.writeFileSync(path, toWrite)
     })
     app.listen(httpPort, () => {
-        console.log("Ready! connect your plugin now\nYou can kill this task by doing ctrl + c")
+        console.log("Ready! connect your plugin now\nWrite in the port you just typed here in the plugin\nYou can kill this task by doing ctrl + c")
     })
 }
