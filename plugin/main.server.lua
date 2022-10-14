@@ -24,7 +24,9 @@ dtsGui = roactrodux.connect(
     end,
     function(dispatch)
         return {
-            
+            startButton = function()
+                
+            end
         }
     end
 )
