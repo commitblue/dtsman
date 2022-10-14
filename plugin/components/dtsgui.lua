@@ -6,8 +6,8 @@ function component:render()
         Size = UDim2.fromScale(1, 1),
         BackgroundColor3 = Color3.fromRGB(4, 21, 144)
     }, {
-        selectChildren = roact.createElement("TextButton", {
-            
+        objectToConvert = roact.createElement("TextButton", {
+
         })
     })
 end
