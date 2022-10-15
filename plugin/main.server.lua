@@ -88,6 +88,7 @@ local function generateDtsCode(obj : Instance)
         end
     end
     generated = generated + "\n};"
+    return generated
 end
 while true do
     if started then
