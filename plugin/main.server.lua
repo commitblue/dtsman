@@ -56,3 +56,7 @@ local tree = roact.createElement(roactrodux.StoreProvider, {
     ["gui"] = roact.createElement(dtsGui)
 })
 roact.mount(tree, widget)
+while started do
+    
+    task.wait(2)
+end
