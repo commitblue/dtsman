@@ -100,6 +100,7 @@ local function generateDtsCode(obj : Instance)
     generated = generated + "\n};"
     return generated
 end
+print(generateDtsCode(workspace.Baseplate.zd))
 while false do
     if started then
         local state = dtsStore:getState()
