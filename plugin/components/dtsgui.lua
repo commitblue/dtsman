@@ -14,7 +14,7 @@ function component:render()
             TextColor3 = Color3.fromRGB(255, 255, 255),
             TextScaled = true,
             Font = Enum.Font.Arial,
-            [roact.Event.MouseButton1Click] = self.props.objectSelect
+            [roact.Event.Activated] = self.props.objectSelect
         }, {
             ["$uicorner"] = roact.createElement("UICorner", {
                 CornerRadius = UDim.new(0.2, 0)
@@ -42,7 +42,7 @@ function component:render()
             BackgroundColor3 = Color3.fromRGB(67, 26, 204),
             Size = UDim2.fromScale(0.9, 0.1),
             Position = UDim2.fromScale(0.04, 0.4),
-            [roact.Event.MouseButton1Click] = self.props.startButton,
+            [roact.Event.Activated] = self.props.startButton,
         }, {
             ["$uicorner"] = roact.createElement("UICorner", {
                 CornerRadius = UDim.new(0.2, 0)
