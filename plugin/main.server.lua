@@ -56,8 +56,13 @@ local tree = roact.createElement(roactrodux.StoreProvider, {
     ["gui"] = roact.createElement(dtsGui)
 })
 roact.mount(tree, widget)
-local function getObjFromString(str)
-    
+local function getGlobalFromString(str)
+    local got = _G
+    local pathSplit = str:split(".")
+    for _,v in pathSplit do
+        got = got[v]
+    end
+    return got
 end
 while true do
     if started then
