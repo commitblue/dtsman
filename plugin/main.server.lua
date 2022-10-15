@@ -127,7 +127,7 @@ local function generateDtsCode(obj : Instance)
     generated = generated .. "\n};"
     return generated
 end
-while false do
+while true do
     if started then
         local success, result = pcall(function()
             local state = dtsStore:getState()
