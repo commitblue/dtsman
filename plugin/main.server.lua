@@ -100,7 +100,7 @@ local function generateDtsCode(obj : Instance)
     generated = generated + "\n};"
     return generated
 end
-while true do
+while false do
     if started then
         local state = dtsStore:getState()
         export type state = {
