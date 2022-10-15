@@ -8,6 +8,8 @@ local components = script.Parent:WaitForChild("components")
 local stores = script.Parent:WaitForChild("stores")
 local dtsStore = require(stores:WaitForChild("dtsstore"))
 local dtsGui = require(components:WaitForChild("dtsgui"))
+local toolbar = plugin:CreateToolbar("dtsman")
+local button = toolbar:CreateButton("Toggle widget", "toggles widget", "")
 --TODO : Generate .d.ts code and post it to the dtsserver
 local widget = plugin:CreateDockWidgetPluginGui("dtsManGui", DockWidgetPluginGuiInfo.new(
     Enum.InitialDockState.Float,
@@ -19,6 +21,10 @@ local widget = plugin:CreateDockWidgetPluginGui("dtsManGui", DockWidgetPluginGui
     400
 ))
 widget.Title = "dtsMan"
+button.Click:Connect(function()
+    widget.Enabled = not widget.Enabled
+    button.Activated = widget.Enabled
+end)
 local started = false
 dtsGui = roactrodux.connect(
     function(state)
