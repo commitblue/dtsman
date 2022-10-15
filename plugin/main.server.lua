@@ -58,7 +58,11 @@ local tree = roact.createElement(roactrodux.StoreProvider, {
 roact.mount(tree, widget)
 while true do
     if started then
-        
+        local state = dtsStore:getState()
+        export type state = {
+            object : string,
+            status : string
+        }
     end
     task.wait(2)
 end
