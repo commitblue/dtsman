@@ -27,8 +27,10 @@ dtsGui = roactrodux.connect(
             startButton = function()
                 local state = dtsStore:getState()
                 export type state = {
-                    
+                    object : string,
+                    status : string
                 }
+                
             end
         }
     end
