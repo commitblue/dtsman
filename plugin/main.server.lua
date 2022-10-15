@@ -37,6 +37,14 @@ dtsGui = roactrodux.connect(
                         stateToEdit = "status",
                         value = "Stop"
                     })
+                    started = true
+                else
+                    dispatch({
+                        type = "editState",
+                        stateToEdit = "status",
+                        value = "Start"
+                    })
+                    started = false
                 end
             end
         }
