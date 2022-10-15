@@ -56,6 +56,9 @@ local tree = roact.createElement(roactrodux.StoreProvider, {
     ["gui"] = roact.createElement(dtsGui)
 })
 roact.mount(tree, widget)
+local function getObjFromString(str)
+    
+end
 while true do
     if started then
         local state = dtsStore:getState()
@@ -63,6 +66,7 @@ while true do
             object : string,
             status : string
         }
+
     end
     task.wait(2)
 end
