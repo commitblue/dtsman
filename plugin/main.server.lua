@@ -15,10 +15,10 @@ local widget = plugin:CreateDockWidgetPluginGui("dtsManGui", DockWidgetPluginGui
     Enum.InitialDockState.Float,
     false,
     false,
-    300,
-    400,
-    300,
-    400
+    100,
+    200,
+    100,
+    200
 ))
 widget.Title = "dtsMan"
 button.Click:Connect(function()
