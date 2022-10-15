@@ -18,6 +18,7 @@ local widget = plugin:CreateDockWidgetPluginGui("dtsManGui", DockWidgetPluginGui
     400
 ))
 widget.Title = "dtsMan"
+local started = false
 dtsGui = roactrodux.connect(
     function(state)
         return state
@@ -30,7 +31,13 @@ dtsGui = roactrodux.connect(
                     object : string,
                     status : string
                 }
-                
+                if not started then
+                    dispatch({
+                        type = "editState",
+                        stateToEdit = "status",
+                        value = "Stop"
+                    })
+                end
             end
         }
     end
