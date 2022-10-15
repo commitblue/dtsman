@@ -141,6 +141,9 @@ while false do
                 warn("Dts server not detected or isnt running")
             end
         end)
+        if not success then
+            warn(string.format("Unusual error. %s", result))
+        end
     end
     task.wait(2)
 end
