@@ -66,9 +66,8 @@ dtsGui = roactrodux.connect(
                 })
             end,
             objectSelect = function()
-                dispatch({
-
-                })
+                local object = selection.Changed:Wait()
+                print(object)
             end
         }
     end
