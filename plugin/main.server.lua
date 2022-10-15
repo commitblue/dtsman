@@ -84,7 +84,12 @@ while true do
         local success, result = pcall(httpService.GetAsync, string.format("https://localhost:%s/", state.portText))
         if success and result == "dtsman" then
             success, result = pcall(httpService.RequestAsync, {
-                Url = string.format("https://localhost:%s/dts/", state.portText)
+                Url = string.format("https://localhost:%s/dts/", state.portText),
+                Method = "POST",
+                Headers = {
+                    ["Content-Type"] = "application/json",
+                    
+                }
             })
         else
             warn("Dts server not detected or isnt running")
