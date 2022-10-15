@@ -43,14 +43,14 @@ dtsGui = roactrodux.connect(
                     status : string
                 }
                 if not started then
-                    dispatch({
+                    dtsStore:dispatch({
                         type = "editState",
                         stateToEdit = "status",
                         value = "Stop"
                     })
                     started = true
                 else
-                    dispatch({
+                    dtsStore:dispatch({
                         type = "editState",
                         stateToEdit = "status",
                         value = "Start"
@@ -59,7 +59,7 @@ dtsGui = roactrodux.connect(
                 end
             end,
             textChanged = function(text)
-                dispatch({
+                dtsStore:dispatch({
                     type = "editState",
                     stateToEdit = "portText",
                     value = text.Text
@@ -69,13 +69,13 @@ dtsGui = roactrodux.connect(
                 print("works")
                 local objects = selection:Get()[1]
                 if objects then
-                    dispatch({
+                    dtsStore:dispatch({
                         type = "editState",
                         stateToEdit = "object",
                         value = objects:GetFullName()
                     })
                 else
-                    dispatch({
+                    dtsStore:dispatch({
                         type = "editState",
                         stateToEdit = "object",
                         value = "Invalid object"
