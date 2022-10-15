@@ -91,13 +91,15 @@ local tree = roact.createElement(roactrodux.StoreProvider, {
     ["gui"] = roact.createElement(dtsGui)
 })
 roact.mount(tree, widget)
-local function getGlobalFromString(str)
-    local got = _G
-    local pathSplit = str:split(".")
-    for _,v in pathSplit do
-        got = got[v]
-    end
-    return got
+function getGlobalFromString(fullName)
+	local segments = fullName:split(".")
+	local current = game
+
+	for _,location in pairs(segments) do
+		current = current[location]
+	end
+
+	return current
 end
 local function generateDtsCode(obj : Instance)
     local generated = string.format("type %s = %s & {\n   ", obj.Name, obj.ClassName)
