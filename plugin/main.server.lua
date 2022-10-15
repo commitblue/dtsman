@@ -74,7 +74,13 @@ local function getGlobalFromString(str)
 end
 local function generateDtsCode(obj : Instance)
     local generated = string.format("type %s = %s & {\n   ", obj.Name, obj.ClassName)
-
+    for _,v in obj:GetChildren() do
+        generated = generated..obj.Name.." : "..obj.ClassName
+        if #v:GetChildren < 1 then
+            generated += ";\n   "
+        end
+    end
+    generated = generated + "\n}"
 end
 while true do
     if started then
