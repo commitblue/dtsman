@@ -77,10 +77,11 @@ while true do
         local state = dtsStore:getState()
         export type state = {
             object : string,
-            status : string
+            status : string,
+            portText : string
         }
         local refToObject = getGlobalFromString(state.object)
-        local success, result = pcall(httpService.GetAsync, "https://localhost:")
+        local success, result = pcall(httpService.GetAsync, string.format("https://localhost:%s", state.portText))
         if success then
             
         else
