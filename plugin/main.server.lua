@@ -57,7 +57,7 @@ dtsGui = roactrodux.connect(
             end
         }
     end
-)
+)(dtsGui)
 local tree = roact.createElement(roactrodux.StoreProvider, {
     store = dtsStore
 }, {
