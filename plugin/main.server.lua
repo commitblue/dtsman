@@ -72,6 +72,9 @@ local function getGlobalFromString(str)
     end
     return got
 end
+local function generateDtsCode(obj)
+    
+end
 while true do
     if started then
         local state = dtsStore:getState()
@@ -88,9 +91,12 @@ while true do
                 Method = "POST",
                 Headers = {
                     ["Content-Type"] = "application/json",
-                    
+                    dtsFile = generateDtsCode(refToObject)
                 }
             })
+            if not success then
+                warn(string.format("Dts POST request had an error, %s", result))
+            end
         else
             warn("Dts server not detected or isnt running")
         end
