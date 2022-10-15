@@ -59,6 +59,7 @@ dtsGui = roactrodux.connect(
                 end
             end,
             textChanged = function(text)
+                print(text)
                 dispatch({
                     type = "editState",
                     stateToEdit = "portText",
@@ -66,6 +67,7 @@ dtsGui = roactrodux.connect(
                 })
             end,
             objectSelect = function()
+                print("works")
                 local objects = selection:Get()[1]
                 if objects then
                     dispatch({
