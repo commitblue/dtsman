@@ -9,7 +9,7 @@ function component:render()
         objectToConvert = roact.createElement("TextButton", {
             Text = self.props.object,
             Size = UDim2.fromScale(0.9, 0.1),
-            Position = UDim2.fromScale(0.05, 0.1),
+            Position = UDim2.fromScale(0.04, 0.1),
             BackgroundColor3 = Color3.fromRGB(67, 26, 204),
             TextColor3 = Color3.fromRGB(255, 255, 255),
             TextScaled = true,
@@ -26,7 +26,7 @@ function component:render()
             TextColor3 = Color3.fromRGB(255, 255, 255),
             Size = UDim2.fromScale(0.9, 0.1),
             BackgroundColor3 = Color3.fromRGB(67, 26, 204),
-            Position = UDim2.fromScale(0.05, 0.25),
+            Position = UDim2.fromScale(0.04, 0.25),
             [roact.Change.Text] = self.props.textChanged
         }, {
             ["$uicorner"] = roact.createElement("UICorner", {
@@ -40,7 +40,7 @@ function component:render()
             TextColor3 = Color3.fromRGB(255, 255, 255),
             BackgroundColor3 = Color3.fromRGB(67, 26, 204),
             Size = UDim2.fromScale(0.9, 0.1),
-            Position = UDim2.fromScale(0.05, 0.4),
+            Position = UDim2.fromScale(0.04, 0.4),
             [roact.Event.MouseButton1Click] = self.props.startButton,
         }, {
             ["$uicorner"] = roact.createElement("UICorner", {
