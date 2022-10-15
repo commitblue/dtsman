@@ -66,8 +66,16 @@ dtsGui = roactrodux.connect(
                 })
             end,
             objectSelect = function()
-                local object = selection.Changed:Wait()
-                print(object)
+                local objects = selection:Get()[1]
+                if objects then
+                    
+                else
+                    dispatch({
+                        type = "editState",
+                        stateToEdit = "object",
+                        value = "Invalid object"
+                    })
+                end
             end
         }
     end
