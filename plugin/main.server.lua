@@ -26,7 +26,7 @@ button.Click:Connect(function()
     button.Activated = widget.Enabled
 end)
 widget:GetPropertyChangedSignal("Enabled"):Connect(function()
-    button.Activated = widget.Enabled
+    button:SetActive(widget.Enabled)
 end)
 local started = false
 dtsGui = roactrodux.connect(
