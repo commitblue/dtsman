@@ -68,7 +68,11 @@ dtsGui = roactrodux.connect(
             objectSelect = function()
                 local objects = selection:Get()[1]
                 if objects then
-                    
+                    dispatch({
+                        type = "editState",
+                        stateToEdit = "object",
+                        value = objects
+                    })
                 else
                     dispatch({
                         type = "editState",
