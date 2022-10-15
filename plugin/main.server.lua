@@ -66,7 +66,7 @@ dtsGui = roactrodux.connect(
             end,
             objectSelect = function()
                 dispatch({
-
+                    
                 })
             end
         }
