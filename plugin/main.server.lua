@@ -72,8 +72,9 @@ local function getGlobalFromString(str)
     end
     return got
 end
-local function generateDtsCode(obj)
-    local generated = "type %s = %s & {\n   "
+local function generateDtsCode(obj : Instance)
+    local generated = string.format("type %s = %s & {\n   ", obj.Name)
+
 end
 while true do
     if started then
