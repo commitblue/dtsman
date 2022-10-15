@@ -117,7 +117,7 @@ local function generateDtsCode(obj : Instance)
         end
     end
     for _,v in obj:GetChildren() do
-        generated = generated.."   "..obj.Name.." : "..obj.ClassName
+        generated = generated.."   [\""..obj.Name.."\"] : "..obj.ClassName
         if #v:GetChildren() < 1 then
             generated ..= ";\n   "
         else
