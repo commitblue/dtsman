@@ -9,6 +9,7 @@ local stores = script.Parent:WaitForChild("stores")
 local dtsStore = require(stores:WaitForChild("dtsstore"))
 local dtsGui = require(components:WaitForChild("dtsgui"))
 local toolbar = plugin:CreateToolbar("dtsman")
+local selection = game:GetService("Selection")
 local button = toolbar:CreateButton("Toggle widget", "toggles widget", "")
 --TODO : Generate .d.ts code and post it to the dtsserver
 local widget = plugin:CreateDockWidgetPluginGui("dtsManGui", DockWidgetPluginGuiInfo.new(
@@ -66,7 +67,7 @@ dtsGui = roactrodux.connect(
             end,
             objectSelect = function()
                 dispatch({
-                    
+
                 })
             end
         }
