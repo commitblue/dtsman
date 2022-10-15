@@ -71,7 +71,8 @@ while true do
             object : string,
             status : string
         }
-
+        local refToObject = getGlobalFromString(state.object)
+        
     end
     task.wait(2)
 end
