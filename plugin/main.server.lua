@@ -73,7 +73,7 @@ local function getGlobalFromString(str)
     return got
 end
 local function generateDtsCode(obj)
-    
+    local generated = "type %s = %s & {"
 end
 while true do
     if started then
