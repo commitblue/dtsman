@@ -7,8 +7,9 @@ return rodux.Store.new(function(state, action)
         portText = ""
     }
     if action.type == "editState" then
-        state[action.stateToEdit] = action.value
-        return state
+        local newstate = state
+        newstate[action.stateToEdit] = action.value
+        return newstate
     elseif action.type == "overwriteState" then
         return action.state
     end
