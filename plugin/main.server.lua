@@ -63,6 +63,9 @@ dtsGui = roactrodux.connect(
                     stateToEdit = "portText",
                     value = text
                 })
+            end,
+            objectSelect = function()
+                
             end
         }
     end
