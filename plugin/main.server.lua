@@ -74,6 +74,11 @@ while true do
         }
         local refToObject = getGlobalFromString(state.object)
         local success, result = pcall(httpService.GetAsync, "https://localhost:")
+        if success then
+            
+        else
+            warn("Dts server not detected or isnt running")
+        end
     end
     task.wait(2)
 end
