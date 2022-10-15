@@ -73,7 +73,7 @@ dtsGui = roactrodux.connect(
                     dispatch({
                         type = "editState",
                         stateToEdit = "object",
-                        value = objects
+                        value = objects:GetFullName()
                     })
                 else
                     dispatch({
