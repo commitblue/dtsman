@@ -73,7 +73,7 @@ while true do
             status : string
         }
         local refToObject = getGlobalFromString(state.object)
-        local success, result = pcall(httpService.GetAsync, "local")
+        local success, result = pcall(httpService.GetAsync, "https://localhost:")
     end
     task.wait(2)
 end
