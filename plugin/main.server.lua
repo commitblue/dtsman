@@ -8,6 +8,7 @@ local components = script.Parent:WaitForChild("components")
 local stores = script.Parent:WaitForChild("stores")
 local dtsStore = require(stores:WaitForChild("dtsstore"))
 local dtsGui = require(components:WaitForChild("dtsgui"))
+--TODO : Generate .d.ts code and post it to the dtsserver
 local widget = plugin:CreateDockWidgetPluginGui("dtsManGui", DockWidgetPluginGuiInfo.new(
     Enum.InitialDockState.Float,
     false,
@@ -72,7 +73,7 @@ while true do
             status : string
         }
         local refToObject = getGlobalFromString(state.object)
-        
+
     end
     task.wait(2)
 end
