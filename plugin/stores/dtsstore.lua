@@ -3,7 +3,8 @@ local rodux = require(packages:WaitForChild("rodux"))
 return rodux.Store.new(function(state, action)
     state = state or {
         object = "Select an object",
-        status = "Start"
+        status = "Start",
+        portText = ""
     }
     if action.type == "editState" then
         state[action.stateToEdit] = action.value
