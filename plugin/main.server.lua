@@ -1,4 +1,4 @@
-local httpService = game:GetService("HttpService")
+local httpService : HttpService = game:GetService("HttpService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local packages = script.Parent:WaitForChild("packages")
 local roact = require(packages:WaitForChild("roact"))
@@ -73,7 +73,7 @@ while true do
             status : string
         }
         local refToObject = getGlobalFromString(state.object)
-
+        local success, result = pcall(httpService.GetAsync, "local")
     end
     task.wait(2)
 end
