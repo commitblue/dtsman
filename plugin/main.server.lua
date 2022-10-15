@@ -83,7 +83,9 @@ while true do
         local refToObject = getGlobalFromString(state.object)
         local success, result = pcall(httpService.GetAsync, string.format("https://localhost:%s", state.portText))
         if success and result == "dtsman" then
-            
+            success, result = pcall(httpService.RequestAsync, {
+                
+            })
         else
             warn("Dts server not detected or isnt running")
         end
