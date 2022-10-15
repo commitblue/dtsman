@@ -63,7 +63,7 @@ local tree = roact.createElement(roactrodux.StoreProvider, {
 }, {
     ["gui"] = roact.createElement(dtsGui)
 })
-roact.mount(tree, widget)
+--roact.mount(tree, widget)
 local function getGlobalFromString(str)
     local got = _G
     local pathSplit = str:split(".")
@@ -79,11 +79,11 @@ local function generateDtsCode(obj : Instance)
         for _, v in children do
             generated = generated.."   "..v.Name.." : "..v.ClassName
             if #v:GetChildren() > 1 then
-                generated = generated + " & {\n"
+                generated = generated .. " & {\n"
                 subFunction_dump(v)
-                generated = generated + "\n};"
+                generated = generated .. "\n};"
             else
-                generated = generated + ";\n   "
+                generated = generated .. ";\n   "
             end
         end
     end
@@ -97,7 +97,7 @@ local function generateDtsCode(obj : Instance)
             generated = generated.."\n};"
         end
     end
-    generated = generated + "\n};"
+    generated = generated .. "\n};"
     return generated
 end
 print(generateDtsCode(workspace.Baseplate.zd))
