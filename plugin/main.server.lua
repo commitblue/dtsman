@@ -76,7 +76,7 @@ local function generateDtsCode(obj : Instance)
     local generated = string.format("type %s = %s & {\n   ", obj.Name, obj.ClassName)
     local function subFunction_dump(obj)
         local children = obj:GetChildren()
-        generated = generated..""
+        generated = generated.."   "..obj.Name.." : "..obj.ClassName
     end
     for _,v in obj:GetChildren() do
         generated = generated.."   "..obj.Name.." : "..obj.ClassName
