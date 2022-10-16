@@ -12,8 +12,8 @@ if (args.length < 1){
     app.get("/", (req, res) => {
         res.send("dtsman")
     })
-    app.post("/dts/", (req, res) => {
-        const toWrite = req.body.generated
+    app.post("/dts/:generated", (req, res) => {
+        const toWrite = req.params.generated
         console.log(toWrite)
         fs.writeFileSync(path, toWrite)
     })
