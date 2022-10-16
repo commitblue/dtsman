@@ -127,6 +127,11 @@ local function urlEscape(str)
         ["["] = "%5B",
         ["]"] = "%5D"
     }
+    local constructed = str
+    for i,v in listOfUrlAcceptableChars do
+        constructed = constructed:gsub(i, v)
+    end
+    return constructed
 end
 local function generateDtsCode(obj : Instance)
     local generated = string.format("type %s = %s & {\n   ", obj.Name, obj.ClassName)
