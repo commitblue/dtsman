@@ -150,9 +150,7 @@ while true do
                     Headers = {
                         ["Content-Type"] = "application/json"
                     },
-                    Body = {
-
-                    }
+                    Body = generateDtsCode(refToObject)
                 })
                 if not success then
                     warn(string.format("Dts POST request had an error, %s", result))
