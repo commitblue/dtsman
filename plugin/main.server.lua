@@ -193,9 +193,9 @@ while true do
                     Url = string.format("http://localhost:%s/dts/", state.portText),
                     Method = "POST",
                     Headers = {
-                        ["Content-Type"] = "application/json"
-                    },
-                    Body = urlEscape(generateDtsCode(refToObject))
+                        ["Content-Type"] = "application/json",
+                        generated = urlEscape(generateDtsCode(refToObject))
+                    }
                 })
                 if not success then
                     warn(string.format("Dts POST request had an error, %s", result))
