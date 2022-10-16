@@ -7,12 +7,13 @@ if (args.length < 1){
     const httpPort = args[1]
     const express = require("express")
     const app = express()
+    const bodyparser = require("body-parser")
+    app.use(bodyparser.json())
     app.get("/", (req, res) => {
         res.send("dtsman")
     })
     app.post("/dts/", (req, res) => {
         const toWrite = req.body
-        console.log(toWrite)
         fs.writeFileSync(path, toWrite)
     })
     app.listen(httpPort, () => {
