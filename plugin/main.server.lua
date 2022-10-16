@@ -66,7 +66,6 @@ dtsGui = roactrodux.connect(
                 })
             end,
             objectSelect = function()
-                print("works")
                 local objects = selection:Get()[1]
                 if objects then
                     dtsStore:dispatch({
