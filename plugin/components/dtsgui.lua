@@ -22,6 +22,7 @@ function component:render()
         }),
         portText = roact.createElement("TextBox", {
             PlaceholderText = "port e.g. 8080",
+            Text = self.props.portText,
             Font = Enum.Font.Arial,
             TextScaled = true,
             TextColor3 = Color3.fromRGB(255, 255, 255),
