@@ -110,7 +110,7 @@ local function generateDtsCode(obj : Instance)
         local children = obj:GetChildren()
         for _, v in children do
             generated = generated..intents.."[\""..escape(v.Name).."\"] : "..v.ClassName
-            if #v:GetChildren() > 0 then
+            if #v:GetChildren() >= 0 then
                 generated = generated .. " & {\n"
                 subFunction_dump(v, intents .. "   ")
                 generated = generated .. "\n};"
@@ -121,7 +121,7 @@ local function generateDtsCode(obj : Instance)
     end
     for _,v in obj:GetChildren() do
         generated = generated.."   [\""..escape(obj.Name).."\"] : "..obj.ClassName
-        if #v:GetChildren() > 0 then
+        if #v:GetChildren() < 0 then
             generated ..= ";\n   "
         else
             generated = generated.." & {\n"
