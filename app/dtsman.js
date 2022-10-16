@@ -15,7 +15,7 @@ if (args.length < 1){
     app.post("/dts/", (req, res) => {
         const toWrite = req.body.generated
         console.log(toWrite)
-        fs.writeFileSync(path, JSON.stringify(toWrite))
+        fs.writeFileSync(path, toWrite)
     })
     app.listen(httpPort, () => {
         console.log("Ready! connect your plugin now\nWrite in the port you just typed here in the plugin\nYou can kill this task by doing ctrl + c")
