@@ -210,5 +210,5 @@ while true do
             warn(string.format("Unusual error. %s", result))
         end
     end
-    task.wait(5)
+    task.wait(2)
 end
