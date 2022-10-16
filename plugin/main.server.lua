@@ -158,7 +158,7 @@ local function generateDtsCode(obj : Instance)
             if #v:GetChildren() > 0 then
                 generated = generated .. " & {\n"
                 subFunction_dump(v, intents .. "   ")
-                generated = generated .. "\n};"
+                generated = generated ..intents.. "\n};"
             else
                 generated = generated .. ";\n   "
             end
@@ -171,7 +171,7 @@ local function generateDtsCode(obj : Instance)
         else
             generated = generated.." & {\n"
             subFunction_dump(v, "      ")
-            generated = generated.."\n};"
+            generated = generated.."   \n};"
         end
     end
     generated = generated .. "\n};"
