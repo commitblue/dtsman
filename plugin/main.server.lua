@@ -32,7 +32,10 @@ end)
 local started = false
 dtsGui = roactrodux.connect(
     function(state)
-        return state
+        return {
+            object = state.object,
+            status = state.status
+        }
     end,
     function(dispatch)
         return {
