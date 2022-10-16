@@ -141,9 +141,11 @@ local function urlEscape(str)
         ["}"] = "%7D",
         ["~"] = "%7E"
     }
-    local constructed = str
-    for i,v in listOfUrlAcceptableChars do
-        constructed = constructed:gsub(i, v)
+    local constructed = str:split("")
+    for i,v in constructed do
+        if listOfUrlAcceptableChars[v] then
+            constructed[i] = listOfUrlAcceptableChars[v]
+        end
     end
     return constructed
 end
