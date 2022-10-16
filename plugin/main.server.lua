@@ -148,7 +148,7 @@ while true do
             print(result)
             if success and result == "dtsman" then
                 success, result = pcall(httpService.RequestAsync, httpService, {
-                    Url = string.format("http://localhost:%s/dts/", httpService, state.portText),
+                    Url = string.format("http://localhost:%s/dts/", state.portText),
                     Method = "POST",
                     Headers = {
                         ["Content-Type"] = "application/json",
