@@ -106,8 +106,13 @@ local function escape(str)
 end
 local function urlEscape(str)
     local listOfUrlAcceptableChars = {
-        " " == "%20",
-
+        [" "] = "%20",
+        ["!"] = "%21",
+        ["#"] = "%23",
+        ["$"] = "%24",
+        ["%"] = "%25",
+        ["&"] = "%26",
+        
     }
 end
 local function generateDtsCode(obj : Instance)
