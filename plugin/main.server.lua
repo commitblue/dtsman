@@ -144,7 +144,7 @@ while true do
             }
             print(state.portText)
             local refToObject = getGlobalFromString(state.object)
-            local success, result = pcall(httpService.GetAsync, string.format("https://localhost:%s/", state.portText))
+            local success, result = pcall(httpService.GetAsync, httpService, string.format("https://localhost:%s/", state.portText))
             print(result)
             if success and result == "dtsman" then
                 success, result = pcall(httpService.RequestAsync, {
