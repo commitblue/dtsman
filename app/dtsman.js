@@ -14,6 +14,7 @@ if (args.length < 1){
     })
     app.post("/dts/:generated", (req, res) => {
         const toWrite = req.params.generated
+        console.log(toWrite)
         fs.writeFileSync(path, toWrite)
     })
     app.listen(httpPort, () => {
