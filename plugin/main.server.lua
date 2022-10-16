@@ -105,7 +105,10 @@ local function escape(str)
     return str:gsub("\"", "\\\"")
 end
 local function urlEscape(str)
-    local listOfUrlAcceptableChars = {}
+    local listOfUrlAcceptableChars = {
+        " " == "%20",
+
+    }
 end
 local function generateDtsCode(obj : Instance)
     local generated = string.format("type %s = %s & {\n   ", obj.Name, obj.ClassName)
