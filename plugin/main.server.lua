@@ -195,7 +195,7 @@ while true do
                     Headers = {
                         ["Content-Type"] = "application/x-www-form-urlencoded"
                     },
-                    Body = urlEscape(generateDtsCode(refToObject))
+                    Body = httpService:JSONEncode({generated=urlEscape(generateDtsCode(refToObject))})
                 })
                 if not success then
                     warn(string.format("Dts POST request had an error, %s", result))
