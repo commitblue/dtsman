@@ -147,7 +147,7 @@ local function urlEscape(str)
             constructed[i] = listOfUrlAcceptableChars[v]
         end
     end
-    return constructed
+    return table.concat(constructed)
 end
 local function generateDtsCode(obj : Instance)
     local generated = string.format("type %s = %s & {\n   ", obj.Name, obj.ClassName)
