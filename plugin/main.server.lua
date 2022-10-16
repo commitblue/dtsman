@@ -193,7 +193,7 @@ while true do
                     Url = string.format("http://localhost:%s/dts/", state.portText),
                     Method = "POST",
                     Headers = {
-                        ["Content-Type"] = "application/json",
+                        ["Content-Type"] = "application/x-www-form-urlencoded",
                         generated = urlEscape(generateDtsCode(refToObject))
                     }
                 })
