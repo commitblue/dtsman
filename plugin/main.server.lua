@@ -106,7 +106,7 @@ local function escape(str)
 end
 local function generateDtsCode(obj : Instance)
     local generated = string.format("type %s = %s & {\n   ", obj.Name, obj.ClassName)
-    local function subFunction_dump(obj)
+    local function subFunction_dump(obj, intents)
         local children = obj:GetChildren()
         for _, v in children do
             generated = generated.."   [\""..escape(v.Name).."\"] : "..v.ClassName
@@ -125,7 +125,7 @@ local function generateDtsCode(obj : Instance)
             generated ..= ";\n   "
         else
             generated = generated.." & {\n"
-            subFunction_dump(v)
+            subFunction_dump(v, "      ")
             generated = generated.."\n};"
         end
     end
