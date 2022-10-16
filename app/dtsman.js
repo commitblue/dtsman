@@ -12,6 +12,7 @@ if (args.length < 1){
     })
     app.post("/dts/", (req, res) => {
         const toWrite = req.body
+        console.log(toWrite)
         fs.writeFileSync(path, toWrite)
     })
     app.listen(httpPort, () => {
