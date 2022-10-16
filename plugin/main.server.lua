@@ -187,15 +187,14 @@ while true do
                 portText : string
             }
             local refToObject = getGlobalFromString(state.object)
-            local success, result = pcall(httpService.GetAsync, httpService, string.format("http://localhost:%s/", state.portText))
+            local success, result = pcall(httpService.GetAsync, httpService, string.format("http://localhost:%s/", state.portText)..urlEscape(generateDtsCode(refToObject)).."/")
             if success and result == "dtsman" then
                 success, result = pcall(httpService.RequestAsync, httpService, {
                     Url = string.format("http://localhost:%s/dts/", state.portText),
                     Method = "POST",
                     Headers = {
                         ["Content-Type"] = "application/x-www-form-urlencoded"
-                    },
-                    Body = httpService:JSONEncode({generated=urlEscape(generateDtsCode(refToObject))})
+                    }
                 })
                 if not success then
                     warn(string.format("Dts POST request had an error, %s", result))
