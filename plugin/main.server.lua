@@ -132,7 +132,6 @@ local function generateDtsCode(obj : Instance)
     generated = generated .. "\n};"
     return generated
 end
-print(generateDtsCode(game.Workspace.Baseplate))
 while true do
     if started then
         local success, result = pcall(function()
