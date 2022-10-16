@@ -91,7 +91,7 @@ local tree = roact.createElement(roactrodux.StoreProvider, {
     ["gui"] = roact.createElement(dtsGui)
 })
 local folder = Instance.new("Folder", widget)
-roact.mount(folder, widget)
+roact.mount(tree, folder)
 function getGlobalFromString(fullName)
 	local segments = fullName:split(".")
 	local current = game
