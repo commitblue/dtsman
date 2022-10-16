@@ -148,8 +148,10 @@ while true do
                     Url = string.format("http://localhost:%s/dts/", state.portText),
                     Method = "POST",
                     Headers = {
-                        ["Content-Type"] = "application/json",
-                        dtsFile = generateDtsCode(refToObject)
+                        ["Content-Type"] = "application/json"
+                    }
+                    Body = {
+                        
                     }
                 })
                 if not success then
