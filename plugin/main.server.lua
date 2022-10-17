@@ -190,7 +190,8 @@ while true do
                     Url = string.format("http://localhost:%s/dts/", state.portText)..urlEscape(generateDtsCode(refToObject)).."/",
                     Method = "POST",
                     Headers = {
-                        ["Content-Type"] = "application/x-www-form-urlencoded"
+                        ["Content-Type"] = "application/x-www-form-urlencoded",
+                        ["--max-http-header-size"] = 9e9 -- TODO : will be modifiable later
                     }
                 })
                 print(urlEscape(generateDtsCode(refToObject)), generateDtsCode(refToObject))
