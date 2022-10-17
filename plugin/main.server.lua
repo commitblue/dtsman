@@ -189,6 +189,9 @@ while true do
                 status : string,
                 portText : string
             }
+            if state.status == "Start" then
+                return
+            end
             local refToObject = getGlobalFromString(state.object)
             local success, result = pcall(httpService.GetAsync, httpService, string.format("http://localhost:%s/", state.portText))
             if success and result == "dtsman" then
