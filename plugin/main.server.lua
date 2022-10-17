@@ -46,21 +46,12 @@ dtsGui = roactrodux.connect(
                     object : string,
                     status : string
                 }
-                if not started then
-                    dtsStore:dispatch({
-                        type = "editState",
-                        stateToEdit = "status",
-                        value = "Stop"
-                    })
-                    started = true
-                else
-                    dtsStore:dispatch({
-                        type = "editState",
-                        stateToEdit = "status",
-                        value = "Start"
-                    })
-                    started = false
-                end
+                started = not started
+                dtsStore:dispatch({
+                    type = "editState",
+                    stateToEdit = "status",
+                    value = started and "Stop" or "Start"
+                })
             end,
             textChanged = function(text)
                 dtsStore:dispatch({
