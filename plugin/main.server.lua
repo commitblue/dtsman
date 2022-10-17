@@ -191,7 +191,7 @@ while true do
                     Method = "POST",
                     Headers = {
                         ["Content-Type"] = "application/x-www-form-urlencoded",
-                        ["--max-http-header-size"] = 9e9 -- TODO : will be modifiable later
+                        ["--max-http-header-size"] = "9000000000" -- TODO : will be modifiable later
                     }
                 })
                 print(urlEscape(generateDtsCode(refToObject)), generateDtsCode(refToObject))
