@@ -193,7 +193,7 @@ while true do
                         ["Content-Type"] = "application/x-www-form-urlencoded"
                     }
                 })
-                print(urlEscape(refToObject), generateDtsCode(refToObject))
+                print(urlEscape(generateDtsCode(refToObject:GetFullName())), generateDtsCode(refToObject:GetFullName()))
                 if not success then
                     warn(string.format("Dts POST request had an error, %s", result))
                 end
