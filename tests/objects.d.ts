@@ -1,4 +1,4 @@
-type Dummy = Model & {
+type Dummy = Model & { // your average dummy :D
       ["Dummy"] : Model & {
       ["RootRigAttachment"] : Attachment & {
          ["OriginalPosition"] : Vector3Value;
