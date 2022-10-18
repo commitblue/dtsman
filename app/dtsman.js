@@ -10,7 +10,7 @@ if (args.length < 1){
     app.get("/", (req, res) => {
         res.send("dtsman")
     })
-    app.use(require("body-parser"))
+    app.use(require("body-parser").json())
     app.post("/dts/", (req, res) => {
         const toWrite = req.body.generated
         console.log(toWrite)
