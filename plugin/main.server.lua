@@ -192,7 +192,7 @@ while true do
                     Headers = {
                         ["Content-Type"] = "application/x-www-form-urlencoded"
                     },
-                    Body = string.format("{\"generated\":%s}", urlEscape(generateDtsCode(refToObject)))
+                    Body = "text="..urlEscape(generateDtsCode(refToObject))
                 })
                 if not success then
                     warn(string.format("Dts POST request had an error, %s", result))
