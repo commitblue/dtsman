@@ -10,8 +10,7 @@ if (args.length < 1){
     app.get("/", (req, res) => {
         res.send("dtsman")
     })
-    app.use(require("body-parser").urlencoded())
-    app.post("/dts/", (req, res) => {
+    app.post("/dts/", require("body-parser").urlencoded(), (req, res) => {
         const toWrite = req.body.generated
         console.log(toWrite)
         fs.writeFileSync(path, toWrite)
