@@ -14,6 +14,7 @@ if (args.length < 1){
         const toWrite = req.body.generated
         console.log(toWrite)
         fs.writeFileSync(path, toWrite)
+        res.status(200).send("OK")
     })
     app.listen(httpPort, () => {
         console.log("Ready! connect your plugin now\nWrite in the port you just typed here in the plugin\nYou can kill this task by doing ctrl + c\nhttps://localhost:" + httpPort + "/")
