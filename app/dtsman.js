@@ -12,7 +12,7 @@ if (args.length < 1){
     })
     app.use(express.json())
     app.post("/dts/", require("body-parser").urlencoded({extended:false}), (req, res) => {
-        const toWrite = req.body
+        const toWrite = req.body.generated
         console.log(toWrite)
         fs.writeFileSync(path, toWrite)
         res.status(200).send("OK")
