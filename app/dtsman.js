@@ -11,8 +11,8 @@ if (args.length < 1){
         res.send("dtsman")
     })
     app.use(express.json())
-    app.post("/dts/", require("body-parser").urlencoded({extended:false}), (req, res) => {
-        const toWrite = req.body.generated
+    app.post("/dts/", require("body-parser").urlencoded({extended:true}), (req, res) => {
+        const toWrite = req.body
         console.log(toWrite)
         fs.writeFileSync(path, toWrite)
         res.status(200).send("OK")
