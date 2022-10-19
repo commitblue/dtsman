@@ -11,7 +11,9 @@ function component:render()
             Size = UDim2.fromOffset(20, 20),
             BackgroundTransparency = 1
         }, {
-            ["$uiaspectratioconstraint"] = roact.createElement("UIAspectRatioConstraint")
+            ["$uiaspectratioconstraint"] = roact.createElement("UIAspectRatioConstraint", {
+                AspectType = Enum.AspectType.ScaleWithParentSize
+            })
         }),
         objectToConvert = roact.createElement("TextButton", {
             Text = self.props.object,
