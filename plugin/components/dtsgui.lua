@@ -6,7 +6,7 @@ function component:render()
         Size = UDim2.fromScale(1, 1),
         BackgroundColor3 = Color3.fromRGB(15, 15, 15)
     }, {
-        Icon = roact.createElement("ImageLabel", {
+        icon = roact.createElement("ImageLabel", {
             Image = "rbxassetid://11319125399",
             Size = UDim2.fromOffset(20, 20),
             BackgroundTransparency = 1
