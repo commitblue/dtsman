@@ -13,7 +13,7 @@ function component:render()
             BackgroundColor3 = Color3.fromRGB(27, 27, 27),
             TextColor3 = Color3.fromRGB(255, 255, 255),
             TextScaled = true,
-            Font = Enum.Font.Arial,
+            Font = Enum.Font.GothamBlack,
             [roact.Event.Activated] = self.props.objectSelect
         }, {
             ["$uicorner"] = roact.createElement("UICorner", {
@@ -23,7 +23,7 @@ function component:render()
         portText = roact.createElement("TextBox", {
             PlaceholderText = "port e.g. 8080",
             Text = self.props.portText,
-            Font = Enum.Font.Arial,
+            Font = Enum.Font.GothamBlack,
             TextScaled = true,
             TextColor3 = Color3.fromRGB(255, 255, 255),
             Size = UDim2.fromScale(0.9, 0.1),
@@ -37,7 +37,7 @@ function component:render()
         }),
         startButton = roact.createElement("TextButton", {
             Text = self.props.status,
-            Font = Enum.Font.Arial,
+            Font = Enum.Font.GothamBlack,
             TextScaled = true,
             TextColor3 = Color3.fromRGB(255, 255, 255),
             BackgroundColor3 = Color3.fromRGB(27, 27, 27),
