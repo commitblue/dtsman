@@ -8,7 +8,7 @@ function component:render()
     }, {
         icon = roact.createElement("ImageLabel", {
             Image = "rbxassetid://11319125399",
-            Size = UDim2.fromOffset(20, 20),
+            Size = UDim2.fromOffset(30, 30),
             BackgroundTransparency = 1
         }, {
             ["$uiaspectratioconstraint"] = roact.createElement("UIAspectRatioConstraint", {
