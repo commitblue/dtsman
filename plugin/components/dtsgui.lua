@@ -6,6 +6,9 @@ function component:render()
         Size = UDim2.fromScale(1, 1),
         BackgroundColor3 = Color3.fromRGB(15, 15, 15)
     }, {
+        Icon = roact.createElement("ImageLabel", {
+
+        }),
         objectToConvert = roact.createElement("TextButton", {
             Text = self.props.object,
             Size = UDim2.fromScale(0.7, 0.1),
