@@ -22,6 +22,7 @@ local widget = plugin:CreateDockWidgetPluginGui("dtsManGui", DockWidgetPluginGui
     200
 ))
 widget.Title = "dtsMan"
+widget.Name = "dtsman"
 button.Click:Connect(function()
     widget.Enabled = not widget.Enabled
     button:SetActive(widget.Enabled)
