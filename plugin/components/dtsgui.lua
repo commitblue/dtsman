@@ -7,7 +7,7 @@ function component:render()
         BackgroundColor3 = Color3.fromRGB(15, 15, 15)
     }, {
         icon = roact.createElement("ImageLabel", {
-            Image = "http://www.roblox.com/asset/?id=//11319125399",
+            Image = "http://www.roblox.com/asset/?id=11319125399",
             Size = UDim2.fromOffset(30, 30),
             BackgroundTransparency = 1
         }, {
