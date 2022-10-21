@@ -40,3 +40,5 @@ file, So whats the hold up?
 Latest plugin is here:
 https://www.roblox.com/library/11335777371/
 Install it and launch studio.
+
+(Note that gui is subject to change, so this gui might be outdated)
