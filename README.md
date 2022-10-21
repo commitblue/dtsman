@@ -11,4 +11,11 @@ very easily. firstly, you should install the .zip at releases
 and unpack it,
 it should look like this when you unpack it
 ![screenshot](/readmeimages/Screenshot_1.png)
-
+now open your search bar and type in "edit the system environment variables" or if you
+dont have administrator rights, "edit environment variables for your account"
+copy the directory path to your dtsman file
+e.g.
+"C:\Users\You\Downloads\dtsman\"
+(NOT THE EXE FILE ITSELF)
+now open that env vars window, and open path
+![screenshot2](/readmeimages/Screenshot_2.png)
