@@ -17,8 +17,8 @@ function component:render()
         }),
         objectToConvert = roact.createElement("TextButton", {
             Text = self.props.object,
-            Size = UDim2.fromScale(0.7, 0.1),
-            Position = UDim2.fromScale(0.07, 0.1),
+            Size = UDim2.fromScale(0.9, 0.1),
+            Position = UDim2.fromScale(0.04, 0.1),
             BackgroundColor3 = Color3.fromRGB(27, 27, 27),
             TextColor3 = Color3.fromRGB(255, 255, 255),
             TextScaled = true,
