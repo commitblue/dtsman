@@ -29,3 +29,7 @@ type in "dtsman" and press enter.
 It should say something like this.
 now that you completely verified dtsman is installed + works,
 we start running it in our terminal
+We should type something like this
+![screenshot5](/readmeimages/Screenshot_5.png)
+Hit enter
+The first argument is the path to your .d.ts file, the second is the port for the server.
