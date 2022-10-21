@@ -46,3 +46,6 @@ open the plugin
 ![screenshot6](/readmeimages/Screenshot_6.png)
 now select an object and click on the button
 ![screenshot7](/readmeimages/Screenshot_7.png)
+type in our port, we set our port to 8080, so i will put the same number
+You might have set another port, so set it to the same port
+![screenshot8](/readmeimages/Screenshot_8.png)
