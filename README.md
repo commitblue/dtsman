@@ -42,3 +42,7 @@ https://www.roblox.com/library/11335777371/
 Install it and launch studio.
 
 (Note that gui is subject to change, so this gui might be outdated)
+open the plugin
+![screenshot6](/readmeimages/Screenshot_6.png)
+now select an object and click on the button
+![screenshot7](/readmeimages/Screenshot_7.png)
