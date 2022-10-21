@@ -56,4 +56,6 @@ Thats it! Watch it become wayy easier.
 Soon, we will be able to convert multiple objects very soon. This is like
 the firstest release now. Hope you enjoy
 
-Bye
+# Limitations (SUBJECT TO CHANGE)
+The biggest con of this is you can only sync one object. Next update or some point,
+We will have some "workers" system where you can sync more than one object.
