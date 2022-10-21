@@ -23,3 +23,9 @@ and add your dir path to dtsman
 ![screenshot3](/readmeimages/Screenshot_3.png)
 Click Ok.
 Click Ok.
+now open your main terminal and then to verify that dtsman works,
+type in "dtsman" and press enter.
+![screenshot4](/readmeimages/Screenshot_4.png)
+It should say something like this.
+now that you completely verified dtsman is installed + works,
+we start running it in our terminal
