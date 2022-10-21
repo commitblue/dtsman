@@ -17,5 +17,9 @@ copy the directory path to your dtsman file
 e.g.
 "C:\Users\You\Downloads\dtsman\"
 (NOT THE EXE FILE ITSELF)
-now open that env vars window, and open path
+now open that env vars window, and open path and then click "new"
+and add your dir path to dtsman
 ![screenshot2](/readmeimages/Screenshot_2.png)
+![screenshot3](/readmeimages/Screenshot_3.png)
+Click Ok.
+Click Ok.
