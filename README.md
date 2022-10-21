@@ -33,5 +33,6 @@ We should type something like this
 ![screenshot5](/readmeimages/Screenshot_5.png)
 Hit enter
 The first argument is the path to your .d.ts file, the second is the port for the server.
-If a popup like "Windows defender has prevented your program from etc etc", Just allow
-access or ignore it.
+If a popup like "Windows defender has prevented your program from etc etc" has appeared, ignore it.
+Tada! You setted up dtsman. on the computer, now we want to put it at roblox studio to start syncing the .d.ts
+file, So whats the hold up?
