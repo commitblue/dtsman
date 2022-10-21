@@ -36,3 +36,7 @@ The first argument is the path to your .d.ts file, the second is the port for th
 If a popup like "Windows defender has prevented your program from etc etc" has appeared, ignore it.
 Tada! You setted up dtsman. on the computer, now we want to put it at roblox studio to start syncing the .d.ts
 file, So whats the hold up?
+
+Latest plugin is here:
+https://www.roblox.com/library/11335777371/
+Install it and launch studio.
