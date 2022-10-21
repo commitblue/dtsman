@@ -44,8 +44,16 @@ Install it and launch studio.
 (Note that gui is subject to change, so this gui might be outdated)
 open the plugin
 ![screenshot6](/readmeimages/Screenshot_6.png)
-now select an object and click on the button
+now select an object u want to convert to a .d.ts file and click on the button
 ![screenshot7](/readmeimages/Screenshot_7.png)
 type in our port, we set our port to 8080, so i will put the same number
 You might have set another port, so set it to the same port
 ![screenshot8](/readmeimages/Screenshot_8.png)
+
+Finally, click start
+Thats it! Watch it become wayy easier.
+
+Soon, we will be able to convert multiple objects very soon. This is like
+the firstest release now. Hope you enjoy
+
+Bye
